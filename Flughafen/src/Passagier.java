@@ -3,11 +3,17 @@ public class Passagier {
     String _vorname;
     String _nachname;
 
+    //Constructor
+    public Passagier(String vorname, String nachname){
+        this.setVorname(vorname);
+        this.setNachname(nachname);
+    }
+
     //Setter
-    public void set_vorname(String vorname) {
+    public void setVorname(String vorname) {
         this._vorname = vorname;
     }
-    public void set_nachname(String nachname) {
+    public void setNachname(String nachname) {
         this._nachname = nachname;
     }
 

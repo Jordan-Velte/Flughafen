@@ -3,8 +3,14 @@ public class Fluglinie {
     String _fluglinienname;
     Airline _name;
 
+    //Constructor
+    public Fluglinie(String fluglinienname, Airline name){
+        this.setFluglinienname(fluglinienname);
+        this.setName(name);
+    }
+
     //Setter
-    public void setFlugliniename(String fluglinienname) {
+    public void setFluglinienname(String fluglinienname) {
         this._fluglinienname = fluglinienname;
     }
     public void setName(Airline name) {
@@ -12,7 +18,7 @@ public class Fluglinie {
     }
 
     //Getter
-    public String getFlugliniename() {
+    public String getFluglinienname() {
         return _fluglinienname;
     }
     public Airline getName() {

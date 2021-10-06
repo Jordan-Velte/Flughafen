@@ -2,6 +2,12 @@ public class Pilot {
     //Deklaration der Klassenvariablen
     String _vorname;
     String _nachname;
+    
+    //Constructor
+    public Pilot(String vorname, String nachname){
+        this.setVorname(vorname);
+        this.setNachname(nachname);
+    }
 
     //Setter
     public void setVorname(String vorname) {
