@@ -6,10 +6,12 @@ public class Flugzeug {
     int _maxPassagiere;
     int _maxPiloten;
 
-    public Flugzeug(String hersteller, String nummer, Airline name){
+    public Flugzeug(String hersteller, String nummer, Airline name, int maxPassagiere, int maxPiloten){
         this.setHersteller(hersteller);
         this.setNummer(nummer);
         this.setName(name);
+        this.setMaxPassagiere(maxPassagiere);
+        this.setMaxPiloten(maxPiloten);
     }
 
     //Setter

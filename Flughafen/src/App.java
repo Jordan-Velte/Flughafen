@@ -86,7 +86,7 @@ public class App {
         
         //Demodaten Anfang
         //Deklaration der Länge der Arrays
-        _airline = new Airline[20];
+        _airline = new Airline[30];
         //Initialisierung der einzelnen Indizes des Arrays
         _airline [0] = new Airline("Lufthansa");
         _airline [1] = new Airline("Air France");
@@ -98,11 +98,43 @@ public class App {
         _bahn [0] = new Bahn("27L");
         _bahn [1] = new Bahn("9R");
 
-        _flughafen = new Flughafen[1];
+        _flughafen = new Flughafen[0];
         _flughafen[0] = new Flughafen("Flughafen Königsdorf", "Königsdorf");
 
-        _fluglinie = new Fluglinie[20];
-        _fluglinie[0] = new Fluglinie("HAM-MUC", airline);
+        _fluglinie = new Fluglinie[30];
+        _fluglinie[0] = new Fluglinie("HAM-FRA", _airline[0]);
+        _fluglinie[1] = new Fluglinie("HAM-CDG", _airline[1]);
+        _fluglinie[2] = new Fluglinie("HAM-LHR", _airline[2]);
+        _fluglinie[3] = new Fluglinie("HAM-EWR", _airline[3]);
+        _fluglinie[4] = new Fluglinie("HAM-APG", _airline[4]);
+
+        _pilot = new Pilot[30];
+        _pilot[0] = new Pilot("Heinrich", "Peters");
+        _pilot[1] = new Pilot("Gustav", "Müller");
+        _pilot[2] = new Pilot("Siegfried", "Ampel");
+        _pilot[3] = new Pilot("Jordan", "Velte");
+        _pilot[4] = new Pilot("Sabine", "Schön");
+
+        _flugzeug = new Flugzeug[30];
+        _flugzeug [0] = new Flugzeug("Airbus", "320", _airline[0], 200, 2);
+        _flugzeug [1] = new Flugzeug("Airbus", "319", _airline[1], 180, 2);
+        _flugzeug [2] = new Flugzeug("Airbus", "320", _airline[2], 200, 2);
+        _flugzeug [3] = new Flugzeug("Boeing", "767-300", _airline[3], 300, 2);
+        _flugzeug [4] = new Flugzeug("Boeing", "737", _airline[4], 200, 2);
+
+        _passagier = new Passagier[10000];
+        _passagier[0] = new Passagier("Janine", "Friedhold");
+        _passagier[1] = new Passagier("Karoline", "Liesa");
+        _passagier[2] = new Passagier("Barbara", "Jessica");
+        _passagier[3] = new Passagier("Tom", "Philipp");
+        _passagier[4] = new Passagier("Svenja", "Falk");
+
+        _terminal = new Terminal[2];
+        _terminal[0] = new Terminal("Terminal 1");
+        _terminal[1] = new Terminal("Terminal 2");
+        
+        
+
 
 
 
