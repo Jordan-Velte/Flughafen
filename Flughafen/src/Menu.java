@@ -278,6 +278,74 @@ public class Menu {
         
 
     }
+    //CREATE METHODEN ENDE
+
+    //SHOW METHODEN
+    
+    //Show Airline Methode
+    public void showAirline(){
+        for (Airline airline : App.getALLAirline()){
+            if(airline != null){
+                System.out.println("Airline: " + airline.getName() + " Flugzeug: " + airline.getFlugzeug().getNummer() + " " + airline.getFlugzeug().getHersteller() + " Fluglinie: " + airline.getFluglinie().getFluglinienname());
+            }
+        }
+    }
+    //Show Bahn Methode
+    public void showBahn(){
+        for (Bahn bahn : App.getALLBahn()){
+            if(bahn != null){
+                System.out.println(bahn.getName());
+            }
+        }
+    }
+    //Show Flughafen Methode
+    public void showFlughafen(){
+        for (Flughafen flughafen : App.getALLFlughafen()){
+            if(flughafen != null){
+                System.out.println(flughafen.getName() + " " + flughafen.getStandort());
+            }
+        }
+    }
+    //Show Fluglinie Methode
+    public void showFluglinie(){
+        for (Fluglinie fluglinie : App.getALLFluglinie()){
+            if(fluglinie != null){
+                System.out.println(fluglinie.getFluglinienname() + " " + fluglinie.getName().getName());
+            }
+        }
+    }
+    //Show Flugzeug Methode
+    public void showFlugzeug(){
+        for (Flugzeug flugzeug : App.getALLFlugzeug()){
+            if (flugzeug != null){
+                System.out.println(flugzeug.getHersteller() + " " + flugzeug.getNummer() + " " + flugzeug.getName().getName());
+            }
+        }
+    }
+    //Show Passagier Methode
+    public void showPassagier(){
+        for (Passagier passagier : App.getALLPassagier()){
+            if (passagier != null){
+                System.out.println(passagier.getVorname() + " " + passagier.getNachname());
+            }
+        }
+    }
+    //Show Pilot Methode
+    public void showPilot(){
+        for (Pilot pilot : App.getALLPilot()){
+            if (pilot != null){
+                System.out.println(pilot.getVorname() + " " + pilot.getNachname());
+            }
+        }
+    }
+    //Show Terminal Methode
+    public void showTerminal(){
+        for (Terminal terminal : App.getALLTerminal()){
+            if (terminal != null){
+                System.out.println(terminal.getName() + terminal.getAirline().getName());
+            }
+        }
+    }
 
 
 }
