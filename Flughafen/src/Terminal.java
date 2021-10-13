@@ -4,8 +4,9 @@ public class Terminal {
     Airline _airline;
 
     //Constructor
-    public Terminal(String name){
+    public Terminal(String name, Airline airline){
         this.setName(name);
+        this.setAirline(airline);
     }
 
     //Setter

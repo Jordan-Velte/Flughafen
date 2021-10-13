@@ -80,25 +80,26 @@ public class App {
 
     //Main-Methode als Einstiegspunkt des Programms
     public static void main(String[] args) throws Exception {
-        //Printout test
+        /*Printout test
         System.out.println("Hallo, liebe Informatiker!");
         System.out.println("Hallo, liebe Informatiker!");
+        */
         
         //Demodaten Anfang
         //Deklaration der Länge der Arrays
         _airline = new Airline[30];
         //Initialisierung der einzelnen Indizes des Arrays
-        _airline [0] = new Airline("Lufthansa");
-        _airline [1] = new Airline("Air France");
-        _airline [2] = new Airline("British Airways");
-        _airline [3] = new Airline("United Airlines");
-        _airline [4] = new Airline("Ryanair");
+        _airline [0] = new Airline("Lufthansa", _flugzeug[0], _fluglinie[0]);
+        _airline [1] = new Airline("Air France", _flugzeug[1], _fluglinie[1]);
+        _airline [2] = new Airline("British Airways", _flugzeug[2], _fluglinie[2]);
+        _airline [3] = new Airline("United Airlines", _flugzeug[3], _fluglinie[3]);
+        _airline [4] = new Airline("Ryanair", _flugzeug[4], _fluglinie[4]);
 
         _bahn = new Bahn[5];
         _bahn [0] = new Bahn("27L");
         _bahn [1] = new Bahn("9R");
 
-        _flughafen = new Flughafen[0];
+        _flughafen = new Flughafen[5];
         _flughafen[0] = new Flughafen("Flughafen Königsdorf", "Königsdorf");
 
         _fluglinie = new Fluglinie[30];
@@ -130,9 +131,13 @@ public class App {
         _passagier[4] = new Passagier("Svenja", "Falk");
 
         _terminal = new Terminal[2];
-        _terminal[0] = new Terminal("Terminal 1");
-        _terminal[1] = new Terminal("Terminal 2");
+        _terminal[0] = new Terminal("Terminal 1", _airline[0]);
+        _terminal[1] = new Terminal("Terminal 2", _airline[1]);
         
+        //Neues Objekt der Klasse Menu
+        Menu menu = new Menu();
+        //Methode wird durch Punktnotation am Objekt aufgerufen
+        menu.startMenu();
         
 
 

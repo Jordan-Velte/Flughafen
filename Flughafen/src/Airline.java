@@ -5,8 +5,10 @@ public class Airline {
     Fluglinie _fluglinie;
     
     //Constructor
-    public Airline (String name){
+    public Airline (String name, Flugzeug flugzeug, Fluglinie fluglinie){
         this.setName(name);
+        this.setFlugzeug(flugzeug);
+        this.setFluglinie(fluglinie);
     }
 
     //Setter
