@@ -122,6 +122,12 @@ public class App {
         _flugzeug [2] = new Flugzeug("Airbus", "320", _airline[2], 200, 2);
         _flugzeug [3] = new Flugzeug("Boeing", "767-300", _airline[3], 300, 2);
         _flugzeug [4] = new Flugzeug("Boeing", "737", _airline[4], 200, 2);
+        _flugzeug [5] = new Flugzeug("Airbus", "320", _airline[0], 200, 2);
+        _flugzeug [6] = new Flugzeug("Airbus", "320", _airline[0], 200, 2);
+        _flugzeug [7] = new Flugzeug("Airbus", "319", _airline[1], 180, 2);
+        _flugzeug [8] = new Flugzeug("Airbus", "319", _airline[1], 180, 2);
+        _flugzeug [9] = new Flugzeug("Airbus", "319", _airline[2], 180, 2);
+        _flugzeug [10] = new Flugzeug("Airbus", "319", _airline[2], 180, 2);
 
         _passagier = new Passagier[10000];
         _passagier[0] = new Passagier("Janine", "Friedhold");

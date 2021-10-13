@@ -70,7 +70,14 @@ public class Menu {
             }
         }
         else if(choice.equals("2")){
-            System.out.println("Flug noch nicht implementiert.");
+            //Wahrhscheinlich hier der falsche Ansatz, komme aber nicht darauf wie man das ohne eine Klasse realisieren kann.
+            createPilotMenu();
+            createFluglinieMenu();
+            createPassagierMenu();
+            createBahnMenu();
+            //Startzeit und maxPassagier-Check fehlt!
+
+            
         }
         else if(choice.equals("3")){
             System.out.println("Bitte wähle die auszugebenen Objekte aus: ");
@@ -86,28 +93,28 @@ public class Menu {
             System.out.println("Deine Auswahl ist: " + choice3);
 
             if(choice3.equals("1")){
-                System.out.println("Airline Ausgabe noch nicht implementiert");
+                showAirline();
             }
             else if(choice3.equals("2")){
-                System.out.println("Bahn Ausgabe noch nicht implementiert");
+                showBahn();
             }
             else if(choice3.equals("3")){
-                System.out.println("Flughafen Ausgabe noch nicht implementiert");
+                showFlughafen();
             }
             else if(choice3.equals("4")){
-                System.out.println("Fluglinie Ausgabe noch nicht implementiert");
+                showFluglinie();
             }
             else if(choice3.equals("5")){
-                System.out.println("Flugzeug Ausgabe noch nicht implementiert");
+                showFlugzeug();
             }
             else if(choice3.equals("6")){
-                System.out.println("Passagier Ausgabe noch nicht implementiert");
+                showPassagier();
             }
             else if(choice3.equals("7")){
-                System.out.println("Pilot Ausgabe noch nicht implementiert");
+                showPilot();
             }
             else if(choice3.equals("8")){
-                System.out.println("Terminal Ausgabe noch nicht implementiert");
+                showTerminal();
             }
             else{
                 System.out.println("Bitte wählen Sie eine der obigen Optionen aus.");
