@@ -2,11 +2,13 @@ public class Flug {
     Flugzeug _flugzeug;
     Fluglinie _fluglinie;
     Bahn _bahn;
-    Passagier[] _passagier;
-    Pilot[] _pilot;
+    Passagier _passagier;
+    Pilot _pilot;
     String _startzeit;
 
-    public Flug(Flugzeug flugzeug, Fluglinie fluglinie, Bahn bahn, Passagier[] passagier, Pilot[] pilot, String startzeit){
+    //Array weg bei Pilot + Passagier als Test
+
+    public Flug(Flugzeug flugzeug, Fluglinie fluglinie, Bahn bahn, Passagier passagier, Pilot pilot, String startzeit){
         setFlugzeug(flugzeug);
         setBahn(bahn);
         setFluglinie(fluglinie);
@@ -16,9 +18,9 @@ public class Flug {
     }
 
     //Muss noch!
-    public void addPassagier(Passagier passagier){
+    /*public void addPassagier(Passagier passagier){
         _passagier[0] = passagier;
-    }
+    }*/
 
     public void setBahn(Bahn bahn) {
         this._bahn = bahn;
@@ -29,10 +31,10 @@ public class Flug {
     public void setFlugzeug(Flugzeug flugzeug) {
         this._flugzeug = flugzeug;
     }
-    public void setPassagier(Passagier[] passagier) {
+    public void setPassagier(Passagier passagier) {
         this._passagier = passagier;
     }
-    public void setPilot(Pilot[] pilot) {
+    public void setPilot(Pilot pilot) {
         this._pilot = pilot;
     }
     public void setStartzeit(String startzeit) {
@@ -48,10 +50,10 @@ public class Flug {
     public Flugzeug getFlugzeug() {
         return _flugzeug;
     }
-    public Passagier[] getPpassagier() {
+    public Passagier getPpassagier() {
         return _passagier;
     }
-    public Pilot[] getPilot() {
+    public Pilot getPilot() {
         return _pilot;
     }
     public String getStartzeit() {

@@ -155,6 +155,10 @@ public class App {
         _terminal = new Terminal[3];
         _terminal[0] = new Terminal("Terminal 1", _airline[0]);
         _terminal[1] = new Terminal("Terminal 2", _airline[1]);
+
+        //Flugdemodaten:
+        _flug = new Flug[10000];
+        _flug[0] = new Flug(_flugzeug[0], _fluglinie[0], _bahn[0], _passagier[0], _pilot[0], "8:00");
         
         //Neues Objekt der Klasse Menu
         Menu menu = new Menu();

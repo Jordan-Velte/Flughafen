@@ -22,7 +22,7 @@ public class Menu {
         System.out.println("Wilkommen im Menu!");
         System.out.println("Bitte wähle aus:");
         System.out.println("(1) Neues Objekt hinzufügen");
-        System.out.println("(2) Flug");
+        System.out.println("(2) Flugbuchung");
         System.out.println("(3) Aktuelle Objekte ausgeben");
         //Methodenvariable = choice. Eingabe wird zwischengespeichert in Variable Choice
         String choice = getScanner().nextLine();
@@ -84,6 +84,7 @@ public class Menu {
             System.out.println("(6) Passagier");
             System.out.println("(7) Pilot");
             System.out.println("(8) Terminal");
+            System.out.println("(9) Flug");
             String choice3 = getScanner().nextLine();
             System.out.println("Deine Auswahl ist: " + choice3);
 
@@ -110,6 +111,9 @@ public class Menu {
             }
             else if(choice3.equals("8")){
                 showTerminal();
+            }
+            else if(choice3.equals("9")){
+                showFlug();
             }
             else{
                 System.out.println("Bitte wählen Sie eine der obigen Optionen aus.");
@@ -334,6 +338,7 @@ public class Menu {
         }
         String passagier_choice = getScanner().next();
         int passagier_index = Integer.valueOf(passagier_choice);
+        
         i=0;
         //Pilot
         System.out.println("Bitte wähle Pilot aus:");
@@ -422,6 +427,15 @@ public class Menu {
         for (Terminal terminal : App.getALLTerminal()){
             if (terminal != null){
                 System.out.println(terminal.getName() + " " + terminal.getAirline().getName());
+            }
+        }
+    }
+
+    //Show Flug Methode
+    public void showFlug(){
+        for (Flug flug : App.getALLFlug()){
+            if(flug != null){
+                System.out.println("Flugzeug: " + flug.getFlugzeug().getHersteller() + " " + flug.getFlugzeug().getNummer() + " Fluglinie: " + flug.getFluglinie().getFluglinienname() + " Bahn: " + flug.getBahn().getName() + " Passagier: " + flug.getPpassagier().getVorname() + " " + flug.getPpassagier().getNachname() + " Pilot: " + flug.getPilot().getVorname() + " " + flug.getPilot().getNachname()+ " Startzeit: " + flug.getStartzeit());
             }
         }
     }
