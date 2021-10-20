@@ -13,6 +13,7 @@ public class App {
             }
             i = i+1;
         }
+        System.out.println(i);
     } 
     //Deklaration Arrays
     static Airline[] _airline;
@@ -23,6 +24,7 @@ public class App {
     static Passagier[] _passagier;
     static Pilot[] _pilot;
     static Terminal[] _terminal;
+    static Flug[] _flug;
 
     //Rückgabemethode --> Arrays vom jeweiligen Typen werden zurückgegeben
     public static Airline[] getALLAirline(){
@@ -48,6 +50,9 @@ public class App {
     }
     public static Terminal[] getALLTerminal(){
         return _terminal;
+    }
+    public static Flug[] getALLFlug(){
+        return _flug;
     }
 
     //Mit AddObject Methode
@@ -75,6 +80,9 @@ public class App {
     public static void addTerminal(Terminal terminal){
         addObject(terminal, getALLTerminal());
     }
+    public static void addFlug(Flug flug){
+        addObject(flug, getALLFlug());
+    }
 
 
 
@@ -89,11 +97,11 @@ public class App {
         //Deklaration der Länge der Arrays
         _airline = new Airline[30];
         //Initialisierung der einzelnen Indizes des Arrays
-        _airline [0] = new Airline("Lufthansa", _flugzeug[0], _fluglinie[0]);
-        _airline [1] = new Airline("Air France", _flugzeug[1], _fluglinie[1]);
-        _airline [2] = new Airline("British Airways", _flugzeug[2], _fluglinie[2]);
-        _airline [3] = new Airline("United Airlines", _flugzeug[3], _fluglinie[3]);
-        _airline [4] = new Airline("Ryanair", _flugzeug[4], _fluglinie[4]);
+        _airline [0] = new Airline("Lufthansa");
+        _airline [1] = new Airline("Air France");
+        _airline [2] = new Airline("British Airways");
+        _airline [3] = new Airline("United Airlines");
+        _airline [4] = new Airline("Ryanair");
 
         _bahn = new Bahn[5];
         _bahn [0] = new Bahn("27L");
@@ -129,6 +137,14 @@ public class App {
         _flugzeug [9] = new Flugzeug("Airbus", "319", _airline[2], 180, 2);
         _flugzeug [10] = new Flugzeug("Airbus", "319", _airline[2], 180, 2);
 
+        //TBD
+        _airline[0].setFlugzeug(_flugzeug[0]);
+        _airline[1].setFlugzeug(_flugzeug[1]);
+        _airline[2].setFlugzeug(_flugzeug[2]);
+        _airline[3].setFlugzeug(_flugzeug[3]);
+        _airline[4].setFlugzeug(_flugzeug[4]);
+
+
         _passagier = new Passagier[10000];
         _passagier[0] = new Passagier("Janine", "Friedhold");
         _passagier[1] = new Passagier("Karoline", "Liesa");
@@ -136,7 +152,7 @@ public class App {
         _passagier[3] = new Passagier("Tom", "Philipp");
         _passagier[4] = new Passagier("Svenja", "Falk");
 
-        _terminal = new Terminal[2];
+        _terminal = new Terminal[3];
         _terminal[0] = new Terminal("Terminal 1", _airline[0]);
         _terminal[1] = new Terminal("Terminal 2", _airline[1]);
         

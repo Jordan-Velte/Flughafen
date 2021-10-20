@@ -70,12 +70,7 @@ public class Menu {
             }
         }
         else if(choice.equals("2")){
-            //Wahrhscheinlich hier der falsche Ansatz, komme aber nicht darauf wie man das ohne eine Klasse realisieren kann.
-            createPilotMenu();
-            createFluglinieMenu();
-            createPassagierMenu();
-            createBahnMenu();
-            //Startzeit und maxPassagier-Check fehlt!
+            createFlugMenu();
 
             
         }
@@ -287,6 +282,83 @@ public class Menu {
     }
     //CREATE METHODEN ENDE
 
+    //FLUGBUCHUNG
+    public void createFlugMenu(){
+        System.out.println("Flugbuchung noch nicht implementiert");
+        int i = 0;
+
+        //Flugzeug
+        System.out.println("Bitte wähle Flugzeug aus:");
+        for(Flugzeug flugzeug : App.getALLFlugzeug()){
+            if(flugzeug != null){
+                System.out.println(i + " - " + flugzeug.getHersteller() + " " + flugzeug.getNummer());
+                i++;
+            }
+        }
+        String flugzeug_choice = getScanner().next();
+        int flugzeug_index = Integer.valueOf(flugzeug_choice);
+        
+        i=0;
+        
+        //Fluglinie
+        System.out.println("Bitte wähle Fluglinie aus:");
+        for(Fluglinie fluglinie : App.getALLFluglinie()){
+            if(fluglinie != null){
+                System.out.println(i + " - " + fluglinie.getFluglinienname());
+                i++;
+            }
+        }
+        
+        
+        String fluglinie_choice = getScanner().next();
+        int fluglinie_index = Integer.valueOf(fluglinie_choice);
+        i=0;
+        //Bahn
+        System.out.println("Bitte wähle Bahn aus:");
+        for(Bahn bahn : App.getALLBahn()){
+            if(bahn != null){
+                System.out.println(i + " - " + bahn.getName());
+                i++;
+            }
+        }
+        String bahn_choice = getScanner().next();
+        int bahn_index = Integer.valueOf(bahn_choice);
+        i=0;
+        //Passagier
+        System.out.println("Bitte wähle Passagier aus:");
+        for(Passagier passagier : App.getALLPassagier()){
+            if(passagier != null){
+                System.out.println(i + " - " + passagier.getVorname() + " " + passagier.getNachname());
+                i++;
+            }
+        }
+        String passagier_choice = getScanner().next();
+        int passagier_index = Integer.valueOf(passagier_choice);
+        i=0;
+        //Pilot
+        System.out.println("Bitte wähle Pilot aus:");
+        for(Pilot pilot : App.getALLPilot()){
+            if(pilot != null){
+                System.out.println(i + " - " + pilot.getVorname() + " " + pilot.getNachname());
+                i++;
+            }
+        }
+        String pilot_choice = getScanner().next();
+        int pilot_index = Integer.valueOf(pilot_choice);
+
+        //Startzeit
+        System.out.println("Bitte wähle Startzeit:");
+        String startzeit_choice = getScanner().next();
+
+        App.addFlug(new Flug(App.getALLFlugzeug() [flugzeug_index], App.getALLFluglinie()[fluglinie_index], App.getALLBahn()[bahn_index], App.getALLPassagier()[passagier_index], App.getALLPilot()[pilot_index], startzeit_choice));
+
+        //WORK IN PROGRESS
+
+        //Demodaten für Passagiere nötig
+    }
+
+    //FLUGBUCHUNG ENDE
+
     //SHOW METHODEN
     
     //Show Airline Methode
@@ -349,7 +421,7 @@ public class Menu {
     public void showTerminal(){
         for (Terminal terminal : App.getALLTerminal()){
             if (terminal != null){
-                System.out.println(terminal.getName() + terminal.getAirline().getName());
+                System.out.println(terminal.getName() + " " + terminal.getAirline().getName());
             }
         }
     }

@@ -10,6 +10,10 @@ public class Airline {
         this.setFlugzeug(flugzeug);
         this.setFluglinie(fluglinie);
     }
+    //Mehrere Constructoren möglich
+    public Airline (String name){
+        this.setName(name);
+    }
 
     //Setter
     public void setFluglinie(Fluglinie fluglinie) {
